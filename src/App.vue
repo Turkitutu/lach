@@ -12,8 +12,7 @@
       </v-container>
     </v-img>
     <v-main>
-      <Contact />
-      <ScrollTop />
+      <FixedBtns />
       <!--<router-view></router-view>-->
     </v-main>
   </v-app>
@@ -21,14 +20,14 @@
 
 <script>
 import NavBar from "@/components/navbar/NavBar.vue";
-import Contact from "@/components/Contact.vue";
+import FixedBtns from "@/components/FixedBtns.vue";
 
 export default {
   name: "App",
 
   components: {
     NavBar,
-    Contact
+    FixedBtns
   }
 };
 </script>
