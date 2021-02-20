@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <NavBar />
+
+    <v-img class="px-0 pt-0" src="./assets/test.png">
+      <v-container>
+        <v-row class="mb-6 my-15" justify="center">
+          <v-col md="auto">
+            <v-img src="./assets/banner.png"></v-img>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-img>
+    <v-main>
+      <Contact />
+      <ScrollTop />
+      <!--<router-view></router-view>-->
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from "@/components/navbar/NavBar.vue";
+import Contact from "@/components/Contact.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    NavBar,
+    Contact
+  }
+};
+</script>
+-->
