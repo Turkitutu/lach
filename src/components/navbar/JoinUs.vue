@@ -36,6 +36,15 @@ export default {
     menu: false,
     message: false,
     hints: true
-  })
+  }),
+  methods: {
+    openForm() {
+      window.open(
+        "https://docs.google.com/forms/d/e/1FAIpQLScPk5VUfRtJ8Z3ZNIV_KsogHUb57zOBgUJpSPehoEdf86X6xg/viewform",
+        "",
+        "width=1000,height=800, ,toolbar=no"
+      );
+    }
+  }
 };
 </script>

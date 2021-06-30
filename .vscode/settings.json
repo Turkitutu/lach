@@ -2,7 +2,6 @@
     "editor.formatOnSave": true,
     "vetur.format.enable": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "discord.detailsEditing": "Editing [REDACTED]",
-    "discord.lowerDetailsEditing": "Workspace: [REDACTED]"
+    "discord.lowerDetailsEditing": "Workspace: lach Website"
 
   }
