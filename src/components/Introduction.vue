@@ -1,69 +1,30 @@
 <template>
-  <v-col class="mb-4">
-    <div class="hidden-sm-and-down">
-      <v-timeline>
-        <v-timeline-item
-          v-for="(item, index) of texts"
-          :key="index"
-          :color="item.color"
-          small
-        >
-          <v-card class="elevation-2">
-            <v-card-title class="text-h5">
-              {{ item.title }}
-            </v-card-title>
-            <v-card-text>
-              {{ item.text }}
-            </v-card-text>
-          </v-card>
-        </v-timeline-item>
-      </v-timeline>
-    </div>
-    <div class="hidden-md-and-up">
-      <v-timeline dense>
-        <v-timeline-item
-          v-for="(item, index) of texts"
-          :key="index"
-          :color="item.color"
-          small
-        >
-          <v-card class="elevation-2">
-            <v-card-title class="text-h5">
-              {{ item.title }}
-            </v-card-title>
-            <v-card-text>
-              {{ item.text }}
-            </v-card-text>
-          </v-card>
-        </v-timeline-item>
-      </v-timeline>
-    </div>
-  </v-col>
+  <v-container>
+    <v-card min-height="200" class="elevation-1">
+      <v-card-title>📖 Introduction</v-card-title>
+      <v-card-text
+        >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
+        blabla bla</v-card-text
+      >
+      <v-card-title>🎯 Our goals</v-card-title>
+      <v-card-text
+        >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
+        blabla bla</v-card-text
+      >
+      <v-card-title>👨🏻‍🦱 How to become a member</v-card-title>
+      <v-card-text
+        >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
+        blabla bla</v-card-text
+      >
+    </v-card>
+  </v-container>
 </template>
 
 <script>
 export default {
   name: "Introduction",
   components: {},
-  data: () => ({
-    texts: [
-      {
-        title: "Introduction",
-        text: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-        color: "cyan"
-      },
-      {
-        title: "Our goals",
-        text: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-        color: "green"
-      },
-      {
-        title: "idk",
-        text: "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-        color: "amber"
-      }
-    ]
-  }),
+  data: () => ({}),
 
   methods: {}
 };
