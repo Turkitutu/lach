@@ -14,7 +14,9 @@
               <v-card-subtitle
                 >If you have any questions, just fill in the contact form and we
                 will anwser you shortly via email.<br />
-                You can also contact us via facebook or instgram.
+                You can also contact us via
+                <a href="https://www.facebook.com/Lach.club2/">facebook</a> or
+                <a href="https://www.instagram.com/lach.club/">instagram</a>.
               </v-card-subtitle>
               <v-card-text>
                 <v-form class="" ref="form" v-model="valid" lazy-validation>

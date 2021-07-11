@@ -1,5 +1,10 @@
 <template>
-  <div class="text-center">
+  <v-btn v-on:click="openForm" class="elevation-0" color="transparent" rounded>
+    <v-icon class="mr-1">mdi-account-multiple-plus</v-icon>
+    <span>Join Us</span>
+  </v-btn>
+
+  <!--<div class="text-center">
     <v-menu
       v-model="menu"
       :close-on-content-click="false"
@@ -25,7 +30,7 @@
         </v-card-actions>
       </v-card>
     </v-menu>
-  </div>
+  </div>-->
 </template>
 
 <script>

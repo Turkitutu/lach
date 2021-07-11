@@ -6,6 +6,7 @@
         hide-delimiter-background
         show-arrows-on-hover
         dark
+        cycle
       >
         <v-carousel-item v-for="(image, i) in images" :key="i">
           <img :src="image" :alt="image" width="100%" />

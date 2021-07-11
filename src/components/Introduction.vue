@@ -34,10 +34,10 @@
               <v-avatar size="90" tile class="rounded-circle">
                 <img :src="member.avatar" :alt="member.name" />
               </v-avatar>
+              <p class="pa-0 ma-0">{{ member.name }}</p>
               <v-chip class="ma-2" color="orange" small outlined>
                 {{ member.role }}
               </v-chip>
-              <p class="pa-0 ma-0">{{ member.name }}</p>
             </v-card>
           </v-col>
         </v-row>

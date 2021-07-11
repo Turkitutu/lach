@@ -14,16 +14,15 @@
         prev-icon="mdi-chevron-left-circle"
         next-icon="mdi-chevron-right-circle"
       >
-        <v-slide-item
-          v-for="action in list"
-          :key="action.title"
-          v-slot:default="{ active, toggle }"
-        >
+        <v-slide-item v-for="action in list" :key="action.title">
           <v-card
             class="ma-3 justify-center"
             width="250"
             min-height="350"
-            @click="toggle"
+            @click.stop="
+              act = action;
+              dialog = true;
+            "
           >
             <v-img
               class="white--text align-end"
@@ -56,6 +55,25 @@
         </v-slide-item>
       </v-slide-group>
     </v-sheet>
+    <v-dialog v-model="dialog" max-width="290">
+      <v-card>
+        <v-card-title class="text-h5">
+          {{ act.title }}
+        </v-card-title>
+
+        <v-card-text>
+          Sorry, this isn't available yet
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn color="green darken-1" text @click="dialog = false">
+            Close
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -63,6 +81,8 @@
 export default {
   name: "Actions",
   data: () => ({
+    dialog: false,
+    act: {},
     list: [
       {
         title: "Valentine's day 2021",
