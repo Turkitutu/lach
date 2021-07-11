@@ -70,7 +70,8 @@
                   </v-textarea>
 
                   <v-btn
-                    :disabled="!valid"
+                    :disabled="!valid || loading"
+                    :loading="loading"
                     color="success"
                     class="mr-4"
                     @click="validate"
@@ -118,6 +119,15 @@
       :height="cardHeight"
       class="elevation-0 rounded-0"
     ></v-card>
+    <v-snackbar v-model="snackbar" :timeout="10000">
+      {{ snackbarMessage }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -125,9 +135,12 @@
 export default {
   name: "Contact",
   cardHeight: "350px",
-  loading: false,
+
   data: () => ({
+    loading: false,
     valid: true,
+    snackbar: false,
+    snackbarMessage: "",
     firstname: "",
     fnameRules: [
       v => !!v || "First name is required",
@@ -156,11 +169,41 @@ export default {
   }),
   methods: {
     validate() {
-      this.$refs.form.validate();
+      if (this.$refs.form.validate()) {
+        this.loading = true;
+        setTimeout(() => {
+          this.axios
+            .post("./message", {
+              firstName: this.firstname,
+              lastName: this.lastname,
+              email: this.email,
+              subject: this.subject,
+              message: this.message
+            })
+            .then(response => {
+              if (response.data.result == "error") {
+                this.snackbarMessage = "Something is wrong, try again!";
+              } else {
+                this.snackbarMessage =
+                  "Your message has been sent successfully, we will reply to you as soon as possible, Thank you!";
+                this.$refs.form.reset();
+              }
+              this.snackbar = true;
+              this.loading = false;
+            })
+            .catch(error => {
+              console.log(error);
+              this.snackbarMessage = "Something is wrong, try again!";
+              this.snackbar = true;
+              this.loading = false;
+            });
+        }, 1000);
+      }
     },
     reset() {
       this.$refs.form.reset();
-    }
+    },
+    submit() {}
   },
   computed: {
     // eslint-disable-next-line vue/return-in-computed-property

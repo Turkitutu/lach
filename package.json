@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --dest ../lach-backend/public",
     "lint": "vue-cli-service lint"
   },
   "repository": {
@@ -12,9 +12,11 @@
     "url": "https://github.com/Turkitutu/lach"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vee-validate": "^4.4.5",
     "vue": "^2.6.11",
+    "vue-axios": "^3.2.4",
     "vue-instagram-embed": "^1.0.0",
     "vue-router": "^3.2.0",
     "vuetify": "^2.2.11"
