@@ -1,100 +1,129 @@
 <template>
-  <v-container class="spacing-playground pa-6" fluid>
-    <v-row>
-      <v-col cols="12" sm="12" md="6">
-        <v-card
-          class="mx-auto rounded-lg justify-center"
-          elevation="24"
-          max-width="700px"
-        >
-          <v-card-title>Contact</v-card-title>
-          <v-card-subtitle>texttttttttttt</v-card-subtitle>
-          <v-card-text>
-            <v-form class="" ref="form" v-model="valid" lazy-validation>
-              <v-text-field
-                v-model="firstname"
-                :counter="10"
-                :rules="fnameRules"
-                label="Frist name"
-                outlined
-                dense
-                required
-              ></v-text-field>
+  <div style="position: relative" id="contactRef">
+    <div style="position: relative;z-index: 1">
+      <v-container class="spacing-playground pa-6" fluid>
+        <v-row>
+          <v-col cols="12" sm="12" md="6">
+            <v-card
+              class="mx-auto rounded-lg justify-center"
+              elevation="24"
+              max-width="700px"
+              :loading="loading"
+            >
+              <v-card-title>Contact</v-card-title>
+              <v-card-subtitle
+                >If you have any questions, just fill in the contact form and we
+                will anwser you shortly via email.<br />
+                You can also contact us via facebook or instgram.
+              </v-card-subtitle>
+              <v-card-text>
+                <v-form class="" ref="form" v-model="valid" lazy-validation>
+                  <v-text-field
+                    v-model="firstname"
+                    :counter="10"
+                    :rules="fnameRules"
+                    label="Frist name"
+                    outlined
+                    dense
+                    required
+                  ></v-text-field>
 
-              <v-text-field
-                v-model="lastname"
-                :counter="10"
-                :rules="lnameRules"
-                label="Last name"
-                outlined
-                dense
-                required
-              ></v-text-field>
+                  <v-text-field
+                    v-model="lastname"
+                    :counter="10"
+                    :rules="lnameRules"
+                    label="Last name"
+                    outlined
+                    dense
+                    required
+                  ></v-text-field>
 
-              <v-text-field
-                v-model="email"
-                :rules="emailRules"
-                label="E-mail"
-                required
-                outlined
-                dense
-              ></v-text-field>
+                  <v-text-field
+                    v-model="email"
+                    :rules="emailRules"
+                    label="E-mail"
+                    required
+                    outlined
+                    dense
+                  ></v-text-field>
 
-              <v-text-field
-                :counter="30"
-                v-model="subject"
-                :rules="subjectRules"
-                label="Subject"
-                required
-                outlined
-                dense
-              ></v-text-field>
+                  <v-text-field
+                    :counter="30"
+                    v-model="subject"
+                    :rules="subjectRules"
+                    label="Subject"
+                    required
+                    outlined
+                    dense
+                  ></v-text-field>
 
-              <v-textarea
-                :counter="350"
-                outlined
-                dense
-                v-model="message"
-                :rules="messageRules"
-                label="Message"
-              >
-              </v-textarea>
+                  <v-textarea
+                    :counter="350"
+                    outlined
+                    dense
+                    v-model="message"
+                    :rules="messageRules"
+                    label="Message"
+                  >
+                  </v-textarea>
 
-              <v-btn
-                :disabled="!valid"
-                color="success"
-                class="mr-4"
-                @click="validate"
-              >
-                Submit
-              </v-btn>
+                  <v-btn
+                    :disabled="!valid"
+                    color="success"
+                    class="mr-4"
+                    @click="validate"
+                  >
+                    Submit
+                  </v-btn>
 
-              <v-btn color="error" class="mr-4" @click="reset">
-                Reset
-              </v-btn>
-            </v-form>
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="12" md="6">
-        <div class="text-xs-center">
-          <v-img
-            class="mx-auto"
-            src="../assets/logo_gold.png"
-            width="400px"
-          ></v-img>
-          <h1 class="white--text font-weight-regular text-md-center">
-            Love and Ambition for a Cool Humanity
-          </h1>
-        </div>
-      </v-col>
-    </v-row>
-  </v-container>
+                  <v-btn color="error" class="mr-4" @click="reset">
+                    Reset
+                  </v-btn>
+                </v-form>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col cols="12" sm="12" md="6">
+            <div class="text-xs-center">
+              <v-img
+                class="mx-auto"
+                src="../assets/logo_gold.png"
+                width="400px"
+              ></v-img>
+              <h1 class="white--text font-weight-regular text-center">
+                Love and Ambition for a Cool Humanity
+              </h1>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 550"
+      style="position: absolute; top: 0; left: 0;"
+    >
+      <path
+        fill="#212121"
+        fill-opacity="1"
+        d="M0,160L80,138.7C160,117,320,75,480,85.3C640,96,800,160,960,192C1120,224,1280,224,1360,224L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+      ></path>
+    </svg>
+    <v-card
+      style="position: absolute; top: 20vw; left: 0;"
+      color="#212121"
+      width="100%"
+      :height="cardHeight"
+      class="elevation-0 rounded-0"
+    ></v-card>
+  </div>
 </template>
 
 <script>
 export default {
   name: "Contact",
+  cardHeight: "350px",
+  loading: false,
   data: () => ({
     valid: true,
     firstname: "",
@@ -123,13 +152,29 @@ export default {
       v => (v && v.length <= 350) || "Message must be less than 350 characters"
     ]
   }),
-
   methods: {
     validate() {
       this.$refs.form.validate();
     },
     reset() {
       this.$refs.form.reset();
+    }
+  },
+  computed: {
+    // eslint-disable-next-line vue/return-in-computed-property
+    cardHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "1200px";
+        case "sm":
+          return "1200px";
+        case "md":
+          return "1200px";
+        case "lg":
+          return "400px";
+        case "xl":
+          return "400px";
+      }
     }
   }
 };

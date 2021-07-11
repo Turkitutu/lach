@@ -14,7 +14,15 @@
     >
       <v-icon white large>mdi-chevron-up</v-icon>
     </v-btn>
-    <v-btn v-show="true" fab color="grey darken-4" fixed right bottom>
+    <v-btn
+      v-show="cfab"
+      fab
+      color="grey darken-4"
+      fixed
+      right
+      bottom
+      @click="toContact"
+    >
       <v-icon color="white">mdi-email</v-icon>
     </v-btn>
   </v-col>
@@ -25,7 +33,8 @@ export default {
   name: "FixedBtns",
   components: {},
   data: () => ({
-    fab: false
+    fab: false,
+    cfab: true
   }),
 
   methods: {
@@ -36,6 +45,9 @@ export default {
     },
     toTop() {
       this.$vuetify.goTo(0);
+    },
+    toContact() {
+      this.$vuetify.goTo(document.querySelector("#contactRef"));
     }
   }
 };

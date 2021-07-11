@@ -1,50 +1,62 @@
 <template>
-  <v-sheet class="mx-auto" max-width="1500">
-    <v-slide-group
-      v-model="model"
-      center-active
-      show-arrows
-      prev-icon="mdi-chevron-left-circle"
-      next-icon="mdi-chevron-right-circle"
-    >
-      <v-slide-item
-        v-for="action in list"
-        :key="action.title"
-        v-slot:default="{ active, toggle }"
+  <div>
+    <h1 class="text-center pa-5">
+      Our events
+      <v-avatar>
+        <img src="../assets/emoji/hand.png" width="30px" />
+      </v-avatar>
+    </h1>
+    <v-sheet class="mx-auto" max-width="1500">
+      <v-slide-group
+        v-model="model"
+        center-active
+        show-arrows
+        prev-icon="mdi-chevron-left-circle"
+        next-icon="mdi-chevron-right-circle"
       >
-        <v-card
-          class="ma-3 justify-center"
-          width="250"
-          min-height="350"
-          @click="toggle"
+        <v-slide-item
+          v-for="action in list"
+          :key="action.title"
+          v-slot:default="{ active, toggle }"
         >
-          <v-img class="white--text align-end" height="200px" :src="action.src">
-            <v-card-title style="text-shadow: #000 1px 0 10px;">{{
-              action.title
-            }}</v-card-title>
-          </v-img>
+          <v-card
+            class="ma-3 justify-center"
+            width="250"
+            min-height="350"
+            @click="toggle"
+          >
+            <v-img
+              class="white--text align-end"
+              height="200px"
+              :src="action.src"
+            >
+              <v-card-title style="text-shadow: #000 1px 0 10px;">{{
+                action.title
+              }}</v-card-title>
+            </v-img>
 
-          <v-card-subtitle class="pb-0">
-            {{ action.date }}
-          </v-card-subtitle>
+            <v-card-subtitle class="pb-0">
+              {{ action.date }}
+            </v-card-subtitle>
 
-          <v-card-text class="text--primary">
-            <div>{{ action.description }}</div>
-          </v-card-text>
-          <v-row class="fill-height" align="center" justify="center">
-            <v-scale-transition>
-              <v-icon
-                v-if="active"
-                color="white"
-                size="100"
-                v-text="'mdi-close-circle-outline'"
-              ></v-icon>
-            </v-scale-transition>
-          </v-row>
-        </v-card>
-      </v-slide-item>
-    </v-slide-group>
-  </v-sheet>
+            <v-card-text class="text--primary">
+              <div>{{ action.description }}</div>
+            </v-card-text>
+            <v-row class="fill-height" align="center" justify="center">
+              <v-scale-transition>
+                <v-icon
+                  v-if="active"
+                  color="white"
+                  size="100"
+                  v-text="'mdi-close-circle-outline'"
+                ></v-icon>
+              </v-scale-transition>
+            </v-row>
+          </v-card>
+        </v-slide-item>
+      </v-slide-group>
+    </v-sheet>
+  </div>
 </template>
 
 <script>
