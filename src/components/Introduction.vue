@@ -80,7 +80,7 @@ export default {
       {
         name: "Amir Gabsi",
         role: "Chief communication",
-        avatar: "https://lachclub.herokuapp.com/img/amir.76d000cd.png"
+        avatar: require("../assets/avatars/amir.png")
       },
       {
         name: "Jawher Ayari",
