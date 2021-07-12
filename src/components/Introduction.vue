@@ -32,7 +32,17 @@
               height="200px"
             >
               <v-avatar size="90" tile class="rounded-circle">
-                <img :src="member.avatar" :alt="member.name" />
+                <v-img :src="member.avatar" :alt="member.name">
+                  <template v-slot:placeholder>
+                    <v-sheet>
+                      <v-skeleton-loader
+                        type="image"
+                        width="100%"
+                        class="mx-auto"
+                      ></v-skeleton-loader>
+                    </v-sheet>
+                  </template>
+                </v-img>
               </v-avatar>
               <p class="pa-0 ma-0">{{ member.name }}</p>
               <v-chip class="ma-2" color="orange" small outlined>
@@ -70,7 +80,7 @@ export default {
       {
         name: "Amir Gabsi",
         role: "Chief communication",
-        avatar: require("../assets/avatars/amir.png")
+        avatar: "https://lachclub.herokuapp.com/img/amir.76d000cd.png"
       },
       {
         name: "Jawher Ayari",
