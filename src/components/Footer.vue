@@ -37,8 +37,8 @@
         </p>
       </v-card-text>
     </v-card>
-  </v-footer></template
->
+  </v-footer>
+</template>
 
 <script>
 export default {

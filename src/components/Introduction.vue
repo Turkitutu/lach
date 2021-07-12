@@ -28,6 +28,10 @@
             sm="4"
             ><v-card
               class="pt-5 rounded-lg justify-center"
+              :class="
+                'rounded-lg justify-center ' +
+                  ($vuetify.breakpoint.xs ? 'pt-0' : 'pt-7')
+              "
               :width="$vuetify.breakpoint.xs ? '140px' : '200px'"
               :height="$vuetify.breakpoint.xs ? '140px' : '200px'"
             >
@@ -55,7 +59,7 @@
                 {{ member.name }}
               </p>
               <v-chip
-                v-if="member.role.length <= 16 || !$vuetify.breakpoint.xs"
+                v-if="!$vuetify.breakpoint.xs"
                 class="ma-2"
                 color="orange"
                 small
@@ -64,7 +68,7 @@
                 {{ member.role }}
               </v-chip>
               <v-chip
-                v-if="member.role.length > 16 && $vuetify.breakpoint.xs"
+                v-if="$vuetify.breakpoint.xs"
                 class="ma-2"
                 color="orange"
                 x-small

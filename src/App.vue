@@ -2,7 +2,6 @@
   <v-app>
     <NavBar />
     <Corousel />
-    <FixedBtns />
     <Introduction />
     <v-divider class="ma-5"></v-divider>
     <Actions />
@@ -14,6 +13,7 @@
       />-->
     <!--<router-view></router-view>-->
     <Footer />
+    <FixedBtns />
   </v-app>
 </template>
 

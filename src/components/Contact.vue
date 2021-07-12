@@ -94,7 +94,16 @@
                 src="../assets/logo_gold.png"
                 width="400px"
               ></v-img>
-              <h1 class="white--text font-weight-regular text-center">
+              <h2
+                v-if="this.$vuetify.breakpoint.xs"
+                class="white--text font-weight-regular text-center"
+              >
+                Love and Ambition for a Cool Humanity
+              </h2>
+              <h1
+                v-if="!this.$vuetify.breakpoint.xs"
+                class="white--text font-weight-regular text-center"
+              >
                 Love and Ambition for a Cool Humanity
               </h1>
             </div>

@@ -2,7 +2,7 @@
   <div>
     <div style="position: relative">
       <v-carousel
-        :height="carouselHeight"
+        height="auto"
         hide-delimiter-background
         show-arrows-on-hover
         dark
@@ -59,23 +59,6 @@ export default {
       require("../assets/covers/3.png"),
       require("../assets/covers/4.png")
     ]
-  }),
-  computed: {
-    // eslint-disable-next-line vue/return-in-computed-property
-    carouselHeight() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return "190px";
-        case "sm":
-          return "400px";
-        case "md":
-          return "600px";
-        case "lg":
-          return "700px";
-        case "xl":
-          return "900px";
-      }
-    }
-  }
+  })
 };
 </script>
