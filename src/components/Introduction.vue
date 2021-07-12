@@ -27,9 +27,9 @@
             md="2"
             sm="4"
             ><v-card
-              class="pt-6 rounded-lg justify-center"
-              :width="$vuetify.breakpoint.xs ? '150px' : '200px'"
-              :height="$vuetify.breakpoint.xs ? '150px' : '200px'"
+              class="pt-5 rounded-lg justify-center"
+              :width="$vuetify.breakpoint.xs ? '140px' : '200px'"
+              :height="$vuetify.breakpoint.xs ? '140px' : '200px'"
             >
               <v-avatar
                 :size="$vuetify.breakpoint.xs ? 60 : 90"
@@ -54,7 +54,22 @@
               >
                 {{ member.name }}
               </p>
-              <v-chip class="ma-2" color="orange" small outlined>
+              <v-chip
+                v-if="member.role.length <= 16 || !$vuetify.breakpoint.xs"
+                class="ma-2"
+                color="orange"
+                small
+                outlined
+              >
+                {{ member.role }}
+              </v-chip>
+              <v-chip
+                v-if="member.role.length > 16 && $vuetify.breakpoint.xs"
+                class="ma-2"
+                color="orange"
+                x-small
+                outlined
+              >
                 {{ member.role }}
               </v-chip>
             </v-card>
