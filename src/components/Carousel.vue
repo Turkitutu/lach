@@ -22,7 +22,7 @@
     </div>
     <div style="position: relative;">
       <svg
-        style="position: absolute; bottom: 2px;"
+        style="position: absolute; bottom: 4px;"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >
@@ -33,7 +33,7 @@
         ></path>
       </svg>
       <svg
-        style="position: absolute; top: -2px;"
+        style="position: absolute; top: -4px;"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

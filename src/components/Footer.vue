@@ -23,7 +23,7 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Follow us today on our social media <u>#lach.club</u>
+        Follow us today on our social media <u>#LACH.club</u>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -31,9 +31,9 @@
       <v-card-text class="white--text">
         <strong>{{ new Date().getFullYear() }} Copyright</strong> – All Rights
         Reserved to
-        <strong>lach club Hammamet</strong>
+        <strong>LACH club Hammamet</strong>
         <p>
-          Website created and designed by <strong>lach club Hammamet</strong>
+          Website created and designed by <strong>LACH club Hammamet</strong>
         </p>
       </v-card-text>
     </v-card>

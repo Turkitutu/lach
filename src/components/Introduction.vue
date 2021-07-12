@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card min-height="200" class="elevation-1 ma-10">
+    <v-card min-height="200" class="elevation-1 mt-14">
       <v-card-title>📖 Introduction</v-card-title>
       <v-card-text
         >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
@@ -27,11 +27,15 @@
             md="2"
             sm="4"
             ><v-card
-              class="pa-6 rounded-lg justify-center"
-              width="200px"
-              height="200px"
+              class="pt-6 rounded-lg justify-center"
+              :width="$vuetify.breakpoint.xs ? '150px' : '200px'"
+              :height="$vuetify.breakpoint.xs ? '150px' : '200px'"
             >
-              <v-avatar size="90" tile class="rounded-circle">
+              <v-avatar
+                :size="$vuetify.breakpoint.xs ? 60 : 90"
+                tile
+                class="rounded-circle"
+              >
                 <v-img :src="member.avatar" :alt="member.name">
                   <template v-slot:placeholder>
                     <v-sheet>
@@ -44,7 +48,12 @@
                   </template>
                 </v-img>
               </v-avatar>
-              <p class="pa-0 ma-0">{{ member.name }}</p>
+              <p
+                :style="$vuetify.breakpoint.xs ? 'font-size:14px' : ''"
+                class="pa-0 ma-0"
+              >
+                {{ member.name }}
+              </p>
               <v-chip class="ma-2" color="orange" small outlined>
                 {{ member.role }}
               </v-chip>
@@ -64,7 +73,7 @@ export default {
     staff: [
       {
         name: "Israa Ferjani",
-        role: "The president",
+        role: "President",
         avatar: require("../assets/avatars/israa.png")
       },
       {
@@ -94,7 +103,7 @@ export default {
       },
       {
         name: "Soltane Slimene",
-        role: "Trésorier",
+        role: "Treasurer",
         avatar: require("../assets/avatars/soltane.png")
       },
       {

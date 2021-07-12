@@ -24,15 +24,26 @@
               dialog = true;
             "
           >
-            <v-img
-              class="white--text align-end"
-              height="200px"
-              :src="action.src"
-            >
-              <v-card-title style="text-shadow: #000 1px 0 10px;">{{
-                action.title
-              }}</v-card-title>
-            </v-img>
+            <div>
+              <v-img
+                class="white--text align-end"
+                height="200px"
+                :src="action.src"
+              >
+                <v-card-title style="text-shadow: #000 1px 0 10px;">{{
+                  action.title
+                }}</v-card-title>
+                <template v-slot:placeholder>
+                  <v-sheet>
+                    <v-skeleton-loader
+                      type="image"
+                      width="100%"
+                      class="mx-auto"
+                    ></v-skeleton-loader>
+                  </v-sheet>
+                </template>
+              </v-img>
+            </div>
 
             <v-card-subtitle class="pb-0">
               {{ action.date }}

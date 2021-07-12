@@ -66,6 +66,7 @@
                     v-model="message"
                     :rules="messageRules"
                     label="Message"
+                    :rows="$vuetify.breakpoint.xs ? 2 : 4"
                   >
                   </v-textarea>
 
@@ -119,7 +120,7 @@
       :height="cardHeight"
       class="elevation-0 rounded-0"
     ></v-card>
-    <v-snackbar v-model="snackbar" :timeout="10000">
+    <v-snackbar v-model="snackbar" :timeout="20000">
       {{ snackbarMessage }}
 
       <template v-slot:action="{ attrs }">
