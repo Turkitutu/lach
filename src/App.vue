@@ -3,19 +3,17 @@
     <NavBar />
     <Corousel />
     <FixedBtns />
-    <v-main>
-      <Introduction />
-      <v-divider class="ma-5"></v-divider>
-      <Actions />
-      <v-divider class="ma-5"></v-divider>
-      <Contact />
-      <!--<instagram-embed
+    <Introduction />
+    <v-divider class="ma-5"></v-divider>
+    <Actions />
+    <v-divider class="ma-5"></v-divider>
+    <Contact />
+    <!--<instagram-embed
         :url="'https://www.instagram.com/p/CLP6_XBltxB/'"
         :max-width="500"
       />-->
-      <!--<router-view></router-view>-->
-      <Footer />
-    </v-main>
+    <!--<router-view></router-view>-->
+    <Footer />
   </v-app>
 </template>
 

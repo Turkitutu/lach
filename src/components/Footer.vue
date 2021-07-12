@@ -46,8 +46,8 @@ export default {
   components: {},
   data: () => ({
     icons: [
-      { icon: "mdi-facebook", link: "https://www.instagram.com/lach.club/" },
-      { icon: "mdi-instagram", link: "https://www.facebook.com/Lach.club2" },
+      { icon: "mdi-facebook", link: "https://www.facebook.com/Lach.club2" },
+      { icon: "mdi-instagram", link: "https://www.instagram.com/lach.club/" },
       { icon: "mdi-twitter", link: "" },
       { icon: "mdi-discord", link: "" }
     ]

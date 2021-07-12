@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card min-height="200" class="elevation-1">
+    <v-card min-height="200" class="elevation-1 ma-10">
       <v-card-title>📖 Introduction</v-card-title>
       <v-card-text
         >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
@@ -68,7 +68,7 @@ export default {
         avatar: require("../assets/avatars/israa.png")
       },
       {
-        name: "Mohamed Amin Zini",
+        name: "Mohamed Amine Zini",
         role: "Vice president",
         avatar: require("../assets/avatars/zini.png")
       },
