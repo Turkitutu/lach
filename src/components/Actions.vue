@@ -84,7 +84,7 @@ export default {
         title: "Draw a smile",
         date: "DECEMBER 28, 2020",
         description: "dddddddddddddddddddddddd",
-        src: require("../assets/actions/draw_a_smile.jpg")
+        src: require("../assets/actions/draw_a_smile.png")
       },
       {
         title: "Beach clean up🌊",

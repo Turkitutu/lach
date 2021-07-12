@@ -8,8 +8,8 @@
         dark
         cycle
       >
-        <v-carousel-item v-for="(image, i) in images" :key="i">
-          <img :src="image" :alt="image" width="100%" />
+        <v-carousel-item v-for="(image, i) in images" :key="i" eager>
+          <img :src="image" :alt="image" width="100%" eager />
         </v-carousel-item>
       </v-carousel>
       <div class="text-center text-no-wrap">
@@ -54,10 +54,10 @@ export default {
   data: () => ({
     images: [
       // 1380,700 px
-      require("../assets/covers/1.jpg.png"),
-      require("../assets/covers/2.jpg.png"),
-      require("../assets/covers/3.jpg.png"),
-      require("../assets/covers/4.jpg.png")
+      require("../assets/covers/1.png"),
+      require("../assets/covers/2.png"),
+      require("../assets/covers/3.png"),
+      require("../assets/covers/4.png")
     ]
   })
 };
