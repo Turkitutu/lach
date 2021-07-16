@@ -4,7 +4,7 @@
       <v-card-title class="pb-0"
         >Welcome to Love and Ambition for a Cool Humanity (LACH) Club!
       </v-card-title>
-      <v-card-title class="pt-2">🔎 Who we are?</v-card-title>
+      <v-card-title class="pt-2">🔎 Who we are</v-card-title>
       <v-card-text
         >We are a group of teenagers who noticed that there are some negative
         habits and things happening in our environment that need to be reformed,
