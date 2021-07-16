@@ -88,19 +88,19 @@ export default {
       {
         title: "Valentine's day 2021",
         date: "DECEMBER 28, 2020",
-        description: "dddddddddddddddddddddddd",
+        description: "Missing description",
         src: require("../assets/actions/love2_2021.png")
       },
       {
         title: "Draw a smile",
         date: "DECEMBER 28, 2020",
-        description: "dddddddddddddddddddddddd",
+        description: "Missing description",
         src: require("../assets/actions/draw_a_smile.png")
       },
       {
         title: "Beach clean up🌊",
         date: "JUNE 15, 2020",
-        description: "dddddddddddddddddddddddd",
+        description: "Missing description",
         src: require("../assets/actions/clean.png")
       },
       {
