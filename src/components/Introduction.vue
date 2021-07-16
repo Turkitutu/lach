@@ -1,15 +1,23 @@
 <template>
   <v-container>
     <v-card min-height="200" class="elevation-1 mt-14">
-      <v-card-title>📖 Introduction</v-card-title>
+      <v-card-title class="pb-0"
+        >First of all, Welcome to Love and Ambition for a Cool Humanity (LACH)
+        Club!
+      </v-card-title>
+      <v-card-title class="pt-2">🔎 Who we are?</v-card-title>
       <v-card-text
-        >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
-        blabla bla</v-card-text
+        >We are a group of teenagers who noticed that there are some negative
+        habits and things happening in our environment that need to be reformed,
+        and since we strongly believe that the change has to come from within,
+        we wanted to do it through this nonprofit club in November 2019.
+        Everyone is welcome to be a member of this family ❤</v-card-text
       >
       <v-card-title>🎯 Our goals</v-card-title>
       <v-card-text
-        >bla blabla bla bla blabla blabla blabla blabla blabla blabla blabla
-        blabla bla</v-card-text
+        >Our main goal is to give young people the opportunity to develop their
+        skills and strengthen their personalities to create a positive
+        change.</v-card-text
       >
       <v-divider class="p-5"></v-divider>
       <h1 class="text-center pa-5">

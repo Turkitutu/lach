@@ -49,7 +49,7 @@
               {{ action.date }}
             </v-card-subtitle>
 
-            <v-card-text class="text--primary">
+            <v-card-text class="text--primary" style="font-size:14px">
               <div>{{ action.description }}</div>
             </v-card-text>
           </v-card>
@@ -106,21 +106,22 @@ export default {
       {
         title: "Covid Aid",
         date: "឵឵MARCH 2020",
-        description: "dddddddddddddddddddddddd",
+        description:
+          "After the beginning of the COVID-19 pandemic, many people have been stuck between two deadly choices, either staying at home without a job to live by, or going out and risking their lives. March 2020 is when we went to some poor neighborhoods to give them somme food so that they can at least stay safe.",
         src: require("../assets/actions/corona3.png")
       },
       {
         title: "Valentine's day",
         date: "FEBRUARY 14, 2020",
         description:
-          "description bla bla bla bla bla bla bla bla bla bla bla bal",
+          "February 14, 2020, it's the valentine's day, so we went to our secondary school and made some ambiance related to the theme of love by giving students some sweet, chocolate, love letters and the chance to freely express their feelings by writing down the names of their lovers on a board as a beautiful memory that will last for them.",
         src: require("../assets/actions/love2.png")
       },
       {
         title: "Library",
         date: "JANUARY 14, 2020",
         description:
-          "description fdddddddddddddddddddddddddsgfdsgfdshdshsddfsgf dsfgfds gfdsgfds gfdsg dsfg dfg",
+          "Aatef Chaieb secondary school in hammamet is where our club started, the first step we wanted to begin with is opening a library so that people can read and revise for their exams in an appropriate place. There was an empty room so we worked hard on it by cleaning, painting, decorating and adding up books and the result was really amazing as you see.",
         src: require("../assets/actions/library.png")
       }
     ],
