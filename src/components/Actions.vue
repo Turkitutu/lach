@@ -114,7 +114,7 @@ export default {
         title: "Valentine's day",
         date: "FEBRUARY 14, 2020",
         description:
-          "February 14, 2020, it's the valentine's day, so we went to our secondary school and made some ambiance related to the theme of love by giving students some sweet, chocolate, love letters and the chance to freely express their feelings by writing down the names of their lovers on a board as a beautiful memory that will last for them.",
+          "It's the valentine's day, so we went to our secondary school and made some ambiance related to the theme of love by giving students some sweet, chocolate, love letters and the chance to freely express their feelings by writing down the names of their lovers on a board as a beautiful memory that will last for them.",
         src: require("../assets/actions/love2.png")
       },
       {

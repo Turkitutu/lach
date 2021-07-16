@@ -2,8 +2,7 @@
   <v-container>
     <v-card min-height="200" class="elevation-1 mt-14">
       <v-card-title class="pb-0"
-        >First of all, Welcome to Love and Ambition for a Cool Humanity (LACH)
-        Club!
+        >Welcome to Love and Ambition for a Cool Humanity (LACH) Club!
       </v-card-title>
       <v-card-title class="pt-2">🔎 Who we are?</v-card-title>
       <v-card-text
