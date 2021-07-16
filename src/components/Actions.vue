@@ -86,6 +86,12 @@ export default {
     act: {},
     list: [
       {
+        title: "فرحتهم عيدنا",
+        date: "May 27, 2021",
+        description: "Missing description",
+        src: require("../assets/actions/fa.png")
+      },
+      {
         title: "Valentine's day 2021",
         date: "DECEMBER 28, 2020",
         description: "Missing description",
